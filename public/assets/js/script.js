@@ -255,6 +255,14 @@ today = weekday[day]
 
 const firebaseConfig = {
     //Paste Your Firebase Config
+  apiKey: "AIzaSyCyp_QTB7ePntDn2B3CBSEBu9gbAfNWz5A",
+  authDomain: "ml-fitness-tracker.firebaseapp.com",
+  databaseURL: "ml-fitness-tracker-default-rtdb.firebaseio.com",
+  projectId: "ml-fitness-tracker",
+  storageBucket: "ml-fitness-tracker.appspot.com",
+  messagingSenderId: "939145815475",
+  appId: "1:939145815475:web:ae56a8c663ba30670857c6",
+  measurementId: "G-RVYBM7505L"
   };
 firebase.initializeApp(firebaseConfig);
 
