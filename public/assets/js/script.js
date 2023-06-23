@@ -295,7 +295,7 @@ CountRef.on('value', (snapshot) => {
     met_armcircles = 0.6;
     calories = (((armcircles * 4 / 60) * met_armcircles * 3.5 * 65) / 200) + (((lateralraises * 2 / 60) * met_lateralraises * 3.5 * 65) / 200) + (((squats * 4 / 60) * met_squats * 3.5 * 65) / 200)
     calories = parseFloat(calories).toFixed(2);
-    $("#todays_calorie").text(calories)
+    //$("#todays_calorie").text(calories)
 });
 
 function submit() {
