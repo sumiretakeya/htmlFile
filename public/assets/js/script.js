@@ -222,7 +222,7 @@ function stop() {
     var arr = new Int8Array([21, 31]);
     $("#todays_pushups").text(lateralraises);
     $("#todays_squats").text(squats);
-    $("#todays_armcircles").text(armcircles);
+    $("#todays_armcircles").text(armcircles)
     return stopValue.writeValueWithResponse(arr).then(response => {
         return exerciseValue.stopNotifications()
             .then(_ => {
