@@ -98,7 +98,7 @@ var stopValue;
 var resetValue;
 
 var armcircles = 0;
-var pushups = 0;
+var lateralraises = 0;
 var squats = 0;
 
 
@@ -211,16 +211,16 @@ function handleNotifications(event) {
             squats: parseInt(squats),
         });
     } else if (value == 2) {
-        pushups = pushups + 1;
+        lateralraises = lateralraises + 1;
         firebase.database().ref(today + '/exercise/pushups').update({
-            pushups: parseInt(pushups),
+            lateralraises: parseInt(lateralraises),
         });
     }
 }
 
 function stop() {
     var arr = new Int8Array([21, 31]);
-    $("#todays_pushups").text(pushups);
+    $("#todays_pushups").text(lateralraises);
     $("#todays_squats").text(squats);
     $("#todays_armcircles").text(armcircles)
     return stopValue.writeValueWithResponse(arr).then(response => {
@@ -287,13 +287,13 @@ CountRef.on('value', (snapshot) => {
             $(exercise_key).text(exercise_value);
             window[key] = exercise_value;
         });
-    $("#todays_pushups").text(pushups);
+    $("#todays_pushups").text(lateralraises);
     $("#todays_squats").text(squats);
     $("#todays_armcircles").text(armcircles)
-    met_pushups = 0.8;
+    met_lateralraises = 0.8;
     met_squats = 0.8;
     met_armcircles = 0.6;
-    calories = (((armcircles * 4 / 60) * met_armcircles * 3.5 * 65) / 200) + (((pushups * 2 / 60) * met_pushups * 3.5 * 65) / 200) + (((squats * 4 / 60) * met_squats * 3.5 * 65) / 200)
+    calories = (((armcircles * 4 / 60) * met_armcircles * 3.5 * 65) / 200) + (((lateralraises * 2 / 60) * met_lateralraises * 3.5 * 65) / 200) + (((squats * 4 / 60) * met_squats * 3.5 * 65) / 200)
     calories = parseFloat(calories).toFixed(2);
     $("#todays_calorie").text(calories)
 });
