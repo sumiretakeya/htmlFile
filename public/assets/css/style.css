@@ -135,33 +135,37 @@ html {
         border-radius: 10px;
         box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
     }
-    .calorie {
-        grid-column: 1/8;
+    /* 
+.calorie {
+        grid-column: 2/8;
         grid-row: 2/8;
         display: flex;
         justify-content: space-between;
         margin-top: -14rem;
     }
+ */
     .pushup {
-        grid-column: 3/8;
+        grid-column: 2/8;
         grid-row: 1/8;
         display: flex;
         justify-content: space-between;
         margin-top: -9rem;
     }
-    .squats {
-        grid-column: 1/8;
+    /* 
+.squats {
+        grid-column: 2/8;
         grid-row: 5/8;
         display: flex;
         justify-content: space-between;
         margin-top: -8rem;
     }
+ */
     .armcircles {
-        grid-column: 3/8;
-        grid-row: 5/8;
+        grid-column: 2/8;
+        grid-row: 4/8;
         display: flex;
         justify-content: space-between;
-        margin-top: -8rem;
+        margin-top: -3rem;
     }
     .weekly__main {
         grid-column: 1/8;
