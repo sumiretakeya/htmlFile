@@ -160,7 +160,7 @@ html {
         margin-top: -8rem;
     }
  */
-    .armcircles {
+    .juggles {
         grid-column: 2/8;
         grid-row: 4/8;
         display: flex;
@@ -338,7 +338,7 @@ html {
         color: var(--greyDark);
         font-weight: 550;
     }
-    .exercise__names__armcircles {
+    .exercise__names__juggles {
         margin-top: 1rem;
         margin-left: 2rem;
         font-size: 1.6rem;
@@ -346,7 +346,7 @@ html {
         text-align: center;
         color: var(--primary);
     }
-    .exercise__names__armcircles label {
+    .exercise__names__juggles label {
         font-size: 4rem;
         color: var(--greyDark);
         font-weight: 550;
@@ -364,7 +364,7 @@ html {
         color: var(--greyDark);
         font-weight: 550;
     }
-    .todays_activity .armcircles {
+    .todays_activity .juggles {
         margin-left: -2rem;
     }
     #activity__pushup {
@@ -375,7 +375,7 @@ html {
         margin-left: 17.5rem;
         margin-top: -14rem;
     }
-    #activity__armcircles {
+    #activity__juggles {
         margin-left: 17.5rem;
         margin-top: -14rem;
     }

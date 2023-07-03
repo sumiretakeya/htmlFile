@@ -97,7 +97,7 @@ var startValue;
 var stopValue;
 var resetValue;
 
-var armcircles = 0;
+var juggles = 0;
 var lateralraises = 0;
 var squats = 0;
 
@@ -201,9 +201,9 @@ function handleNotifications(event) {
     let value = event.target.value.getInt8();
     console.log(value);
     if (value == 0) {
-        armcircles = armcircles + 1;
-        firebase.database().ref(today + '/exercise/armcircles').update({
-            armcircles: parseInt(armcircles),
+        juggles = juggles + 1;
+        firebase.database().ref(today + '/exercise/juggles').update({
+            juggles: parseInt(juggles),
         });
     } else if (value == 1) {
         squats = squats + 1;
@@ -222,7 +222,7 @@ function stop() {
     var arr = new Int8Array([21, 31]);
     $("#todays_pushups").text(lateralraises);
     $("#todays_squats").text(squats);
-    $("#todays_armcircles").text(armcircles)
+    $("#todays_juggles").text(juggles)
     return stopValue.writeValueWithResponse(arr).then(response => {
         return exerciseValue.stopNotifications()
             .then(_ => {
@@ -289,11 +289,11 @@ CountRef.on('value', (snapshot) => {
         });
     $("#todays_pushups").text(lateralraises);
     $("#todays_squats").text(squats);
-    $("#todays_armcircles").text(armcircles)
+    $("#todays_juggles").text(juggles)
     met_lateralraises = 0.8;
     met_squats = 0.8;
-    met_armcircles = 0.6;
-    calories = (((armcircles * 4 / 60) * met_armcircles * 3.5 * 65) / 200) + (((lateralraises * 2 / 60) * met_lateralraises * 3.5 * 65) / 200) + (((squats * 4 / 60) * met_squats * 3.5 * 65) / 200)
+    met_juggles = 0.6;
+    calories = (((juggles * 4 / 60) * met_juggles * 3.5 * 65) / 200) + (((lateralraises * 2 / 60) * met_lateralraises * 3.5 * 65) / 200) + (((squats * 4 / 60) * met_squats * 3.5 * 65) / 200)
     calories = parseFloat(calories).toFixed(2);
     //$("#todays_calorie").text(calories)
 });
